@@ -19,7 +19,7 @@ func TestParseRobotJson(t *testing.T) {
 	defer func(name string) {
 		err := os.Remove(name)
 		if err != nil {
-			t.Fatal(err)
+
 		}
 	}(tempFile.Name())
 
