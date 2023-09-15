@@ -1,9 +1,9 @@
 package base
 
-import "fmt"
+import "log"
 
 type Printer struct{}
 
 func (p Printer) Print(value string) {
-	fmt.Println(value)
+	log.Println("Message:", value)
 }
