@@ -1,0 +1,14 @@
+[
+  {
+    "name": "base.print",
+    "value": "hello"
+  },
+  {
+    "name": "base.print",
+    "value": "world"
+  },
+  {
+    "name": "base.print",
+    "value": "привет"
+  }
+]

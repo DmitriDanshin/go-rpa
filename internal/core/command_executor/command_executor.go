@@ -1,10 +1,10 @@
-package main
+package command_executor
 
 import (
 	"fmt"
 )
 
-func Execute(commands []CommandsDefinition) {
+func Execute(commands []map[string]any) {
 	for _, command := range commands {
 		if IsValidCommandDefinition(command) {
 			executeCommand(command)
@@ -14,12 +14,12 @@ func Execute(commands []CommandsDefinition) {
 	}
 }
 
-func IsValidCommandDefinition(command CommandsDefinition) bool {
+func IsValidCommandDefinition(command map[string]any) bool {
 	_, ok := command["name"].(string)
 	return ok
 }
 
-func executeCommand(command CommandsDefinition) {
+func executeCommand(command map[string]any) {
 	name := command["name"].(string)
 	if cmd, exists := Commands[name]; exists {
 		newCmd := cmd.NewCommand(command)
